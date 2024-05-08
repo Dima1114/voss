@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: root_user
+    password: root_password
+    url: jdbc:postgresql://${DATABASE_HOST:localhost}:5432/voss
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+voss:
+  baseUrl: http://${VOSS_HOST:localhost}:8080
+  pollingPeriod: ${VOSS_POLLING_PERIOD:5000}
+  enableScheduler: true
+
+server:
+  port: 8081
